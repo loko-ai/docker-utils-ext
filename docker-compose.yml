@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  docker-utils:
+    image: fdom93/docker-utils:0.0.1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/config.json:/root/.docker/config.json
+      - ~/.docker-utils/templates:/templates
+    environment:
+      - ENGINE=docker
+      - SOCKET_HOST=hermes
+      - SOCKET_PORT=8080
+      - TEMPLATES_PATH=/templates/
+    ports:
+      - 8400:8080
+
+  hermes:
+    image: fdom93/hermes:0.0.1
+    #ports:
+    #  - 8401:8080
+

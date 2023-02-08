@@ -1,0 +1,110 @@
+[
+ {
+  "name": "Stacks Info",
+  "description": "\n### Stacks Info\n\nWith this extension you can view all the info about your stacks\n\nYou can then use a function efter this block to manipulate and filter all the data you need to use it.",
+  "configured": true,
+  "inputs": [
+   {
+    "id": "input",
+    "label": "Input",
+    "service": "stacks",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "Output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {
+    "n": 1
+   }
+  }
+ },
+ {
+  "name": "Export Docker-compose",
+  "description": "\n### Stack Export\n\nWith this extension you can export the docker-compose.yml of your stack\nYou need to configure this block with the id of your stack\n(you can use \"Stack Info\" block to take it.",
+  "configured": false,
+  "inputs": [
+   {
+    "id": "input",
+    "label": "Input",
+    "service": "export",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "Output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {},
+   "args": [
+    {
+     "name": "stack_id",
+     "type": "text",
+     "label": "id",
+     "helper": "Your stack's ID",
+     "group": "",
+     "value": null,
+     "description": ""
+    }
+   ]
+  }
+ },
+ {
+  "name": "List images in Livetech Registry",
+  "description": "\n### List images in Livetech Registry\n\nWith this extension you can see all Docker images pushed on Private Livetech Registry\nYou need to configure this block with the name of the image you want to search.\nYou don't need to insert the full name of the image, but you can use also search a part of it.\n(for example, you can search \"stor\" to search \"storage\"",
+  "configured": false,
+  "inputs": [
+   {
+    "id": "input",
+    "label": "Input",
+    "service": "list-images",
+    "to": "output"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "output",
+    "label": "Output"
+   }
+  ],
+  "options": {
+   "group": "Custom",
+   "icon": "RiTyphoonFill",
+   "click": null,
+   "values": {},
+   "args": [
+    {
+     "name": "registry_name",
+     "type": "text",
+     "label": "Registry name",
+     "helper": "The name of Livetech Private Registry",
+     "group": "",
+     "value": null,
+     "description": ""
+    },
+        {
+     "name": "image_name",
+     "type": "text",
+     "label": "Image name to search",
+     "helper": "Image name to search",
+     "group": "",
+     "value": null,
+     "description": ""
+    }
+   ]
+  }
+ }
+]

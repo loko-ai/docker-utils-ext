@@ -1,0 +1,3452 @@
+{
+  "name": "docker-utils-ext",
+  "id": "docker-utils-ext",
+  "description": "",
+  "created_on": "19/09/2022, 08:55:08",
+  "last_modify": "20/10/2022, 14:40:13",
+  "graphs": {
+    "1) Info": {
+      "nodes": [
+        {
+          "id": "79ea9c22-b066-46df-8f9a-f62e560c93a2",
+          "position": {
+            "x": 332.35666008511566,
+            "y": 84.41314347932439
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 973,
+          "height": 182,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "List and count stacks on the host (using Stack Info)",
+            "fill": "#FC8930",
+            "height": 182,
+            "width": 973
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 332.35666008511566,
+            "y": 84.41314347932439
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "6529127c-36c6-4f80-b43b-63aa81127abe",
+          "position": {
+            "x": 1119.1543995470452,
+            "y": 139.7420952386782
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "n = len(data)\n\nif n == 1:\n  count = (f'There is {n} stack on your system: ')\nelse:\n  count = (f'There are {n} stacks on your system: ')\n\nreturn (f'{count} {data}')"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1119.1543995470452,
+            "y": 139.7420952386782
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "fe542893-b6d2-4d5c-a84f-317fa7295524",
+          "position": {
+            "x": 763.9947309008676,
+            "y": 353.40978075754356
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "import json\n\ncontainers = []\nimages = []\n\nstack_name = data['name']\ncount = len(data['children'])\n\nif count == 0:\n  output = (f\"No running containers for stack \\\"{stack_name}\\\"\")\n  return output\n\nelse:\n  for n in range (0, count):\n    containers.append(data['children'][n]['name'])\n    images.append(data['children'][n]['image'])\n    img_out = dict(zip(containers, images))\n    \n\n  output = { \"stack name\": data['name'] , \"stack id\": data['id'], \"name:images\": [img_out] }\n  \n  return output\n\n"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 763.9947309008676,
+            "y": 353.40978075754356
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "080a6891-a9c2-4000-9f43-cbcc2c46d3ea",
+          "position": {
+            "x": 330.6185509640567,
+            "y": 285.02930300046467
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 619.7080001890362,
+          "height": 186.3804777570789,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Print running containers in every stack",
+            "fill": "#43AA8B",
+            "height": 186.3804777570789,
+            "width": 619.7080001890362
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 330.6185509640567,
+            "y": 285.02930300046467
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "18f997d1-c3aa-4f33-8f21-be38233cdf3e",
+          "position": {
+            "x": 337.3325211720032,
+            "y": 500.1104013365296
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 455.5267786746997,
+          "height": 189,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Print running container in a single Stack",
+            "fill": "#90BE6D",
+            "height": 189,
+            "width": 455.5267786746997
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 337.3325211720032,
+            "y": 500.1104013365296
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "657b0c69-fb81-4025-b9c8-c5ff46d4acdb",
+          "position": {
+            "x": 1316,
+            "y": 83.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 437,
+          "height": 183,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "List and count stacks on the host",
+            "fill": "#FC8930",
+            "height": 183,
+            "width": 437
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 1316,
+            "y": 83.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "3cdb853b-cc71-4474-893a-fad97f7fcaaa",
+          "position": {
+            "x": 732,
+            "y": 144.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Selector",
+            "events": null,
+            "description": "### Description\nThe SELECTOR component is used to select the value of one or more object keys. The required key/s are defined using the parameter **Keys**.\n\nIn order to add other keys you need to click on the **\"Add field\"** button.\n\nIf the field **Ignore Error** is toggled, missing keys are ignored.\n\nIt's also possible to select nested key, just by writing them in a *key* field, and seperating them using a full stop. Let's consider the object in the example below: if you want to have access to the content of the \"key3\" object, you need to use the following notation \"key1.key2.key3\".\n\n\n```json\n {\"key1\":{\"key2\":{\"key3\":[\"val1\", \"val2\", \"val3\"]}}} \n```\n\n\n\n### Input\n\nThe input consists of a dictionary.\n\n\n\n### Output\n\nThe output is the value of the required key of the dictionary received as input, if only one key is selected; otherwise it's an object which contains the keys specified and their value.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "ignore_err",
+                  "label": "Ignor Error",
+                  "type": "boolean",
+                  "description": "Choose whether to ignore error in case of a missing key or not"
+                },
+                {
+                  "name": "exclude",
+                  "label": "Exclude Keys",
+                  "type": "boolean",
+                  "description": "If enabled, the output contains the whole input object excluding the specified keys; otherwise, only the specified keys are returned"
+                },
+                {
+                  "name": "keys",
+                  "label": "Keys",
+                  "type": "multiKeyValue",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "description": "Name of the key/s to select from the incoming message",
+                  "fields": [
+                    {
+                      "name": "k",
+                      "placeholder": "key",
+                      "validation": {
+                        "required": "Required field"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "click": null,
+              "icon": "RiCursorFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "ignore_err": false,
+                "exclude": false,
+                "keys": [
+                  {
+                    "k": "name",
+                    "id": "74ce0383-63f5-43a0-a10a-8ea307d3635d"
+                  }
+                ]
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 732,
+            "y": 144.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "813fa659-1040-4bce-88fb-8d16ea26891d",
+          "position": {
+            "x": 927,
+            "y": 178.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Grouper",
+            "events": null,
+            "description": "### Description\nThe GROUPER component is used to group the elements received in input. The items will be returned in batches with a maximum size equal to **Group size**.\n\n### Input\nIn this case there is no fixed input format.\n\n### Output\nIn output lists of elements received in input with a maximum length equal to **Group size**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "n",
+                  "label": "Group size",
+                  "type": "number"
+                }
+              ],
+              "click": null,
+              "icon": "RiGroupFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "n": "100"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 927,
+            "y": 178.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "2728ca44-a1a9-41bf-bf3c-4c2faeaf726a",
+          "position": {
+            "x": 360,
+            "y": 130.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "type": "String",
+                "value": "Hello world!"
+              }
+            }
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 360,
+            "y": 130.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "e6fed702-a9c5-4d6a-a875-4de59704b305",
+          "position": {
+            "x": 365,
+            "y": 332.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Trigger",
+            "events": null,
+            "description": "### Description\nThe TRIGGER component is used to start streams.\n\n### Output\nThe parameter Type can be set as a **String** or an **Object**. The parameter Value, on the other hand, defines the actual output of the component.",
+            "inputs": [],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "description": "The type of data",
+                  "label": "Type",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": [
+                    "String",
+                    "Object"
+                  ],
+                  "value": null
+                },
+                {
+                  "name": "value",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "String": "area",
+                    "Object": "code"
+                  },
+                  "parent": "type",
+                  "label": "Value",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayFill",
+              "values": {
+                "type": "String",
+                "value": "Hello world!"
+              }
+            }
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 365,
+            "y": 332.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "8429cbdf-6a9c-4c20-bfe0-7c7795677724",
+          "position": {
+            "x": 543,
+            "y": 183.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stacks Info",
+            "events": null,
+            "description": "\n### Stacks Info\n\nWith this extension you can view all the info about your stacks.\n\nYou can then use a function after this block to manipulate and filter all the data you need to use it.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stacks_info",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": null,
+              "icon": "RiInformationFill",
+              "values": {
+                "debug": false
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 543,
+            "y": 183.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "28fee378-7389-4e2d-9bbf-ba4832f174ca",
+          "position": {
+            "x": 556,
+            "y": 379.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stacks Info",
+            "events": null,
+            "description": "\n### Stacks Info\n\nWith this extension you can view all the info about your stacks.\n\nYou can then use a function after this block to manipulate and filter all the data you need to use it.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stacks_info",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": null,
+              "icon": "RiInformationFill",
+              "values": {}
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 556,
+            "y": 379.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "a3e28480-6e2e-4e18-ba7f-97af06d83e5c",
+          "position": {
+            "x": 1433,
+            "y": 138.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stacks Name",
+            "events": null,
+            "description": "\n### Stacks Name\n\nWith this extension you can view all the stacks available on your host.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stacks_name",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiInformationFill",
+              "values": {
+                "debug": true
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1433,
+            "y": 138.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "86e430a8-2de1-4555-99e0-7b69e44da3d8",
+          "position": {
+            "x": 836,
+            "y": 498
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 539,
+          "height": 192,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Return ID from Stack name or Container name",
+            "fill": "#F74B65",
+            "height": 192,
+            "width": 539
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 836,
+            "y": 498
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "505da2f1-5e89-4eb7-b869-03197e0e1f59",
+          "position": {
+            "x": 1008,
+            "y": 286
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 533,
+          "height": 181,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Print all the info about running containers",
+            "fill": "#F74B65",
+            "height": 181,
+            "width": 533
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 1008,
+            "y": 286
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "895b6cac-1c1a-4bb9-aed7-4af87913a844",
+          "position": {
+            "x": 1150,
+            "y": 333
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 189,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Containers Info",
+            "events": null,
+            "description": "\n### Containers Info\n\nWith this extension you can view all the containers on the host.\n\nYou can then use a function after this block to manipulate and filter all the data you need to use it.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "containers_info",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiInformationFill",
+              "values": {
+                "debug": true
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1150,
+            "y": 333
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "0326366a-9a4f-4bc9-8a82-976273bb5e5e",
+          "position": {
+            "x": 457,
+            "y": 562
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 172,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stack Inspect",
+            "events": null,
+            "description": "\n### Stack Inspect\n\nWith this extension you can view all the containers and their configurations related to a Stack.\n\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stack_inspect",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "name_stack",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack name to inspect",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiInformationFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "name_stack": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 457,
+            "y": 562
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "eeaa766b-3d7d-4b90-98df-603264d63731",
+          "position": {
+            "x": 903,
+            "y": 553
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stacks ID",
+            "events": null,
+            "description": "\n### Stacks ID\n\nWith this extension you can view the ID of a Stack.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stack_id",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Name of the stack to be convert to its ID",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiInformationFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "stack_name": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 903,
+            "y": 553
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "482278dd-2871-47a9-91d3-a91f3767fac7",
+          "position": {
+            "x": 1125,
+            "y": 555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 164,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Container ID",
+            "events": null,
+            "description": "\n### Container ID\n\nWith this extension you can view the ID of a Container.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "container_id",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack name of your container",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                },
+                {
+                  "name": "container_name",
+                  "type": "text",
+                  "label": "Container Name",
+                  "helper": "Name of the container to be converted to its ID",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiInformationFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "container_name": "gateway",
+                "stack_name": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1125,
+            "y": 555
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [
+        {
+          "id": "reactflow__edge-3cdb853b-cc71-4474-893a-fad97f7fcaaaoutput-813fa659-1040-4bce-88fb-8d16ea26891dinput",
+          "source": "3cdb853b-cc71-4474-893a-fad97f7fcaaa",
+          "sourceHandle": "output",
+          "target": "813fa659-1040-4bce-88fb-8d16ea26891d",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-813fa659-1040-4bce-88fb-8d16ea26891doutput-6529127c-36c6-4f80-b43b-63aa81127abeinput",
+          "source": "813fa659-1040-4bce-88fb-8d16ea26891d",
+          "sourceHandle": "output",
+          "target": "6529127c-36c6-4f80-b43b-63aa81127abe",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-2728ca44-a1a9-41bf-bf3c-4c2faeaf726aoutput-8429cbdf-6a9c-4c20-bfe0-7c7795677724input",
+          "source": "2728ca44-a1a9-41bf-bf3c-4c2faeaf726a",
+          "sourceHandle": "output",
+          "target": "8429cbdf-6a9c-4c20-bfe0-7c7795677724",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-8429cbdf-6a9c-4c20-bfe0-7c7795677724output-3cdb853b-cc71-4474-893a-fad97f7fcaaainput",
+          "source": "8429cbdf-6a9c-4c20-bfe0-7c7795677724",
+          "sourceHandle": "output",
+          "target": "3cdb853b-cc71-4474-893a-fad97f7fcaaa",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-e6fed702-a9c5-4d6a-a875-4de59704b305output-28fee378-7389-4e2d-9bbf-ba4832f174cainput",
+          "source": "e6fed702-a9c5-4d6a-a875-4de59704b305",
+          "sourceHandle": "output",
+          "target": "28fee378-7389-4e2d-9bbf-ba4832f174ca",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#888"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-28fee378-7389-4e2d-9bbf-ba4832f174caoutput-fe542893-b6d2-4d5c-a84f-317fa7295524input",
+          "source": "28fee378-7389-4e2d-9bbf-ba4832f174ca",
+          "sourceHandle": "output",
+          "target": "fe542893-b6d2-4d5c-a84f-317fa7295524",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        }
+      ],
+      "__class__": "Graph"
+    },
+    "2) Import/Export": {
+      "nodes": [
+        {
+          "id": "e128d5b8-ef0e-4d9e-9b5d-855609fb74be",
+          "position": {
+            "x": 1166.3789573075737,
+            "y": 187.1614876607921
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "File Writer",
+            "events": null,
+            "description": "### Description\nThe FILE WRITER component allows you to write files. The **Append** parameter allows you to write a file using multiple inputs. The destination path of the file can be defined when creating the block or passed as input in the previous block. In this way you have the possibility to write multiple files using one block.\n\n### Input\nUsing the parameter **Save as**, the format of the data to be received as input is defined. The available formats are: *text*, *bytes* and *json*. To define the destination path of the file instead, the input is defined as:\n```python\nParameters(data = data, path = filename)\n```\n\n### Output\nThe output confirms that the file has been written with the string: **Written to filename**.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input",
+                "closed": false
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Outputs",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "path",
+                  "type": "text",
+                  "label": "Path"
+                },
+                {
+                  "name": "type",
+                  "label": "Save as",
+                  "type": "select",
+                  "options": [
+                    "text",
+                    "bytes",
+                    "json"
+                  ],
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "append",
+                  "label": "Append",
+                  "type": "dynamic",
+                  "dynamicType": "boolean",
+                  "condition": "[\"text\", \"bytes\"].includes({parent})",
+                  "parent": "type"
+                },
+                {
+                  "name": "overwrite",
+                  "type": "dynamic",
+                  "dynamicType": {
+                    "true": "boolean"
+                  },
+                  "parent": "append",
+                  "label": "Overwrite"
+                }
+              ],
+              "click": null,
+              "icon": "RiFileEditFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "path": "",
+                "type": "text",
+                "append": false
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1166.3789573075737,
+            "y": 187.1614876607921
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "d6535c83-d479-4b69-aea5-b68481863058",
+          "position": {
+            "x": 951.0249266746467,
+            "y": 119.63924088440649
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "from datetime import datetime\n\n## date and time are set on UTC timezone\nnow_formatted = datetime.now().strftime(\"%Y-%m-%d--%H-%M\")\n\nfilename = \"data/data/docker-compose-\" + now_formatted + \".yml\"\n\nreturn Parameters(data = data, path = filename)"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 951.0249266746467,
+            "y": 119.63924088440649
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "96b2f7b0-ab2b-4071-a182-b06fe423ad9b",
+          "position": {
+            "x": 1383,
+            "y": 151
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 72,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "Information",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "s1 = \"Depending on the version of Docker installed on your system, you may have duplicate ports in the exported docker-compose file: \"\ns2 = \"this is not a bug, but a \\\"features\\\" introduced in the latests version of Docker (>= 20.10.6). Docker now supports Ipv4 and Ipv6 protocols for port mapping.\"\ns3 = \"But, if you run this docker-compose, you will NOT have any problems! For more informations, read here: https://github.com/moby/moby/issues/42313 \"\n\nreturn s1 + s2 + s3\n"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1383,
+            "y": 151
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "1bf99800-42d3-4ee0-adb1-0e8b7a51bade",
+          "position": {
+            "x": 333.89713287164005,
+            "y": 86.34223461080057
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 1258.10286712836,
+          "height": 234,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Generate docker-compose.yml file from your stack ",
+            "fill": "#F9C74F",
+            "height": 234,
+            "width": 1258.10286712836
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 333.89713287164005,
+            "y": 86.34223461080057
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "d5c59240-88b5-4cf0-b1ba-3c552849f87d",
+          "position": {
+            "x": 336,
+            "y": 355.1012535095215
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 491,
+          "height": 193,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Create Stack using docker-compose.yml file",
+            "fill": "#FC8930",
+            "height": 193,
+            "width": 491
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 336,
+            "y": 355.1012535095215
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "f34309bc-9522-46e1-866f-24871c89339b",
+          "position": {
+            "x": 678,
+            "y": 169.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Filter",
+            "events": null,
+            "description": "### Description\nThe FILTER component is used to filter the input data. To configure this component, you need to define Python code that returns a boolean (true / false) that depends on the input received. The input can be retrieved using the variable **data**.\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThere are two outputs: **output** and **discarded**. Through the first output are returned the inputs that verify the condition defined inside the component, in the second those that do not verify it.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              },
+              {
+                "id": "discarded",
+                "label": "discarded"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "Python code that return a boolean (True,False). Incoming messages that evaluates to True are sent to the first output while the others are redirected to the second one",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiFilter2Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "notify_warnings": true,
+                "code": "if data == \"Stack not found\":\n  return False\nelse:\n  return True"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 678,
+            "y": 169.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "445d7b2e-70b5-4506-a8be-5f289d677d54",
+          "position": {
+            "x": 915,
+            "y": 223
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Function",
+            "events": null,
+            "description": "### Description\nThe FUNCTION component is used to apply Python code to the input component's. The input can be retrieved using the variable *data*.\n\nTo be able to use data from components of type FUNCTION that are not linked together, the object is set repository.\n\n```python\nrepository.set('value', 5) - this sets the variable value to 5.\nrepository.get('value') - in this way the variable is called value and the value 5 is returned.\n```\n\n### Input\nThe input is used by the component using the variable **data**.\n\n### Output\nThe output coincides with the return of the code defined when the component was created.",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "input"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Common",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "propagate",
+                  "type": "boolean",
+                  "label": "Flush at the end"
+                },
+                {
+                  "name": "notify_warnings",
+                  "type": "boolean",
+                  "label": "Notify warnings"
+                },
+                {
+                  "name": "code",
+                  "type": "code",
+                  "description": "A python function that processes the incoming message. \nVariables available are:\n- **data**: the incoming message\n",
+                  "label": "Code",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "fragment": null,
+                  "advanced": false,
+                  "options": null,
+                  "value": null
+                }
+              ],
+              "click": null,
+              "icon": "RiCodeSSlashFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "propagate": true,
+                "notify_warnings": true,
+                "code": "return \"Stack not found. Check the name in \\\"Export Docker-Compose\\\" extension\""
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 915,
+            "y": 223
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "c8da61d5-b946-417d-b403-29de36c9aca5",
+          "position": {
+            "x": 424,
+            "y": 418.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 239,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Import Docker-Compose",
+            "events": null,
+            "description": "\n### Import Docker-Compose\n\nWith this extension you can run a docker-compose.yml on your host.\n\nGive a name to the new stack and select .yml file to import.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "import_stack",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Import/Export",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "name_new_stack",
+                  "type": "text",
+                  "label": "Stack name",
+                  "helper": "Give a name to your new stack",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                },
+                {
+                  "name": "file_import",
+                  "type": "files",
+                  "label": "File Import",
+                  "helper": "Import your .yml file",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiDownload2Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "name_new_stack": "fede-import-test",
+                "file_import": {
+                  "name": "docker-compose-import.yml",
+                  "path": "data/data/docker-compose-import.yml",
+                  "parent": "data/data",
+                  "isDir": false,
+                  "hidden": false
+                }
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 424,
+            "y": 418.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "7e8dab82-da77-4760-a607-828ad21387ed",
+          "position": {
+            "x": 374,
+            "y": 177
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 239,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Export Docker-Compose",
+            "events": null,
+            "description": "\n### Export Docker-Compose\n\nWith this extension you can export the docker-compose.yml of your stack.\n\nYou can then use a File Writer to save it on the host.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "export_stack",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Import/Export",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack's name to export",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiUploadFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": false,
+                "stack_name": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 374,
+            "y": 177
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [
+        {
+          "id": "8159b19c-b25d-4841-a9c0-85ebbac9d74d",
+          "source": "d6535c83-d479-4b69-aea5-b68481863058",
+          "sourceHandle": "output",
+          "target": "e128d5b8-ef0e-4d9e-9b5d-855609fb74be",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#56DCB9"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "67d47936-9879-4cfb-aaf5-ab1377a3a0ae",
+          "source": "e128d5b8-ef0e-4d9e-9b5d-855609fb74be",
+          "sourceHandle": "output",
+          "target": "96b2f7b0-ab2b-4071-a182-b06fe423ad9b",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#56DCB9",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-f34309bc-9522-46e1-866f-24871c89339boutput-d6535c83-d479-4b69-aea5-b68481863058input",
+          "source": "f34309bc-9522-46e1-866f-24871c89339b",
+          "sourceHandle": "output",
+          "target": "d6535c83-d479-4b69-aea5-b68481863058",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-f34309bc-9522-46e1-866f-24871c89339bdiscarded-445d7b2e-70b5-4506-a8be-5f289d677d54input",
+          "source": "f34309bc-9522-46e1-866f-24871c89339b",
+          "sourceHandle": "discarded",
+          "target": "445d7b2e-70b5-4506-a8be-5f289d677d54",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#D770AD",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        },
+        {
+          "id": "reactflow__edge-7e8dab82-da77-4760-a607-828ad21387edoutput-f34309bc-9522-46e1-866f-24871c89339binput",
+          "source": "7e8dab82-da77-4760-a607-828ad21387ed",
+          "sourceHandle": "output",
+          "target": "f34309bc-9522-46e1-866f-24871c89339b",
+          "targetHandle": "input",
+          "data": {
+            "startColor": "#888",
+            "stopColor": "#D770AD"
+          },
+          "selected": false,
+          "dragging": false,
+          "__class__": "Edge"
+        }
+      ],
+      "__class__": "Graph"
+    },
+    "3) Pause/Unpause": {
+      "nodes": [
+        {
+          "id": "0d6849f3-058a-4cd1-b7ac-31f6ddf7ecca",
+          "position": {
+            "x": 344,
+            "y": 108.20974349975586
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 416,
+          "height": 224,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Pause all the containers in a Stack",
+            "fill": "#90BE6D",
+            "height": 224,
+            "width": 416
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 344,
+            "y": 108.20974349975586
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "88fd8df2-c3ce-4fdd-a242-5dd56dd8142b",
+          "position": {
+            "x": 347,
+            "y": 361.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 415,
+          "height": 195,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Unpause all the containers in a Stack",
+            "fill": "#43AA8B",
+            "height": 195,
+            "width": 415
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 347,
+            "y": 361.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "f292b8b3-a785-45ba-ab9b-b08bd74a0767",
+          "position": {
+            "x": 805,
+            "y": 112.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 423,
+          "height": 227,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Pause a single container",
+            "fill": "#FC8930",
+            "height": 227,
+            "width": 423
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 805,
+            "y": 112.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "9138b5a8-880d-4767-80b1-eb6e222cf2ac",
+          "position": {
+            "x": 804,
+            "y": 365.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 438,
+          "height": 192,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Unpause a single container",
+            "fill": "#F9C74F",
+            "height": 192,
+            "width": 438
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 804,
+            "y": 365.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "b7dac14a-b697-459d-9f38-16a6b64ffcc2",
+          "position": {
+            "x": 468,
+            "y": 178
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 156,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stack Pause",
+            "events": null,
+            "description": "\n### Stack Pause\n\nWith this extension you can pause all the containers related to a Stack.\n\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stack_pause",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Pause/Unpause",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name_pause",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack Name to pause",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPauseCircleFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "stack_name_pause": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 468,
+            "y": 178
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "0f7f0f29-6997-4d5b-ba66-410216ef4e35",
+          "position": {
+            "x": 456,
+            "y": 419
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 172,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stack Unpause",
+            "events": null,
+            "description": "\n### Stack Unpause\n\nWith this extension you can unpause all the containers related to a Stack.\n\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stack_unpause",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Pause/Unpause",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name_unpause",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack Name to unpause",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayCircleFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "stack_name_unpause": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 456,
+            "y": 419
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "f013c54e-7689-4af8-b610-15496a756284",
+          "position": {
+            "x": 923,
+            "y": 185.60000038146973
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 189,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Container Pause",
+            "events": null,
+            "description": "\n### Container Pause\n\nWith this extension you can pause a specific container in a Stack.\n\nYou can use \"Stack Inspect\" or \"Containers Info\" extensions to take container's Name.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "container_pause",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Pause/Unpause",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_cont_name_pause",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "The Stack Name of the container to pause",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                },
+                {
+                  "name": "container_name_pause",
+                  "type": "text",
+                  "label": "Container Name",
+                  "helper": "Container Name to pause",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPauseCircleFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "container_name_pause": "gateway",
+                "stack_cont_name_pause": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 923,
+            "y": 185.60000038146973
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "fe51bc00-6c89-4da9-9335-91548fac47de",
+          "position": {
+            "x": 914,
+            "y": 422.6000003814697
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 206,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Container Unpause",
+            "events": null,
+            "description": "\n### Container Unpause\n\nWith this extension you can unpause a specific container in a Stack.\n\nYou can use \"Stack Inspect\" or \"Containers Info\" extensions to take container's Name.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "container_unpause",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Pause/Unpause",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_cont_name_unpause",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "The Stack Name of the container to unpause",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                },
+                {
+                  "name": "container_name_unpause",
+                  "type": "text",
+                  "label": "Container Name",
+                  "helper": "Container Name to unpause",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiPlayCircleFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "container_name_unpause": "gateway",
+                "stack_cont_name_unpause": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 914,
+            "y": 422.6000003814697
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [],
+      "__class__": "Graph"
+    },
+    "4) Delete": {
+      "nodes": [
+        {
+          "id": "55cae2f0-d236-4fa4-b860-084ef1499bf5",
+          "position": {
+            "x": 370,
+            "y": 113.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 472,
+          "height": 202,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Delete Stack with all related containers",
+            "fill": "#F74B65",
+            "height": 202,
+            "width": 472
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 370,
+            "y": 113.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "f23b421c-113c-4148-8667-362e918e2d48",
+          "position": {
+            "x": 374,
+            "y": 336.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 474,
+          "height": 196,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Delete a single Container",
+            "fill": "#F74B65",
+            "height": 196,
+            "width": 474
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 374,
+            "y": 336.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "0d52562b-4d13-4f02-8a73-ec67b985acef",
+          "position": {
+            "x": 499,
+            "y": 179.60000038146973
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 164,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Stack Delete",
+            "events": null,
+            "description": "\n### Stack Delete\n\nWith this extension you can delete all the containers in a Stack.\n\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "stack_delete",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Delete",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_name_delete",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "Stack Name to delete",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiDeleteBin2Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "stack_name_delete": "fede-import-test"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 499,
+            "y": 179.60000038146973
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "f9b5da4a-a35a-4604-a3cb-d84fec57ceec",
+          "position": {
+            "x": 500,
+            "y": 400.6000003814697
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 197,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Container Delete",
+            "events": null,
+            "description": "\n### Container Delete\n\nWith this extension you can delete a specific container in a Stack.\n\nYou can use \"Stack Inspect\" or \"Containers Info\" extensions to take container's Name.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "container_delete",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Delete",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "stack_cont_name_delete",
+                  "type": "asyncSelect",
+                  "label": "Stack Name",
+                  "helper": "The Stack Name of the container to delete",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "url": "http://localhost:9999/routes/docker-utils-ext/stacks_name_list"
+                },
+                {
+                  "name": "container_name_delete",
+                  "type": "text",
+                  "label": "Container Name",
+                  "helper": "Container Name to delete",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiDeleteBin2Fill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "container_name_delete": "gateway",
+                "stack_cont_name_delete": "loko"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 500,
+            "y": 400.6000003814697
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [],
+      "__class__": "Graph"
+    },
+    "5) Your Host Info": {
+      "nodes": [
+        {
+          "id": "348e8bd6-2a38-4549-adb2-24ac819a398f",
+          "position": {
+            "x": 349.35520010722894,
+            "y": 95.69181190390339
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 455.0306155454265,
+          "height": 197,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "View Docker Registry you are logged in",
+            "fill": "#F74B65",
+            "height": 197,
+            "width": 455.0306155454265
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 349.35520010722894,
+            "y": 95.69181190390339
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "12edf62a-994a-4332-bc82-205705f79416",
+          "position": {
+            "x": 841,
+            "y": 99.00580978393555
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 481,
+          "height": 198,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "View Docker Volumes mounted on your host",
+            "fill": "#F9C74F",
+            "height": 198,
+            "width": 481
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 841,
+            "y": 99.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "1b1e03cf-40e6-4b99-ba3f-7259cfdd1d16",
+          "position": {
+            "x": 453,
+            "y": 154.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 189,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Registries List",
+            "events": null,
+            "description": "\n### Registries List\n\nWith this extension you can view all the registries you are logged in on your host.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "registries",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Host info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiHomeFill",
+              "values": {
+                "debug": true
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 453,
+            "y": 154.00580978393555
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "1046eaa3-c46d-44bb-a0c7-846d4a994972",
+          "position": {
+            "x": 1005,
+            "y": 152.00580978393555
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 150,
+          "height": 56,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Volumes List",
+            "events": null,
+            "description": "\n### Volumes List\n\nWith this extension you can view all the volumes created on your host.\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "volumes",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Host info",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiHomeFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1005,
+            "y": 152.00580978393555
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [],
+      "__class__": "Graph"
+    },
+    "6) Search Private Docker/Pypi": {
+      "nodes": [
+        {
+          "id": "aeb60cfd-2261-4302-addd-73399f8d0585",
+          "position": {
+            "x": 364.83025044156614,
+            "y": 97.57567193251253
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 483.0141493526568,
+          "height": 267,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Search images in Private Docker Registry",
+            "fill": "#277DA1",
+            "height": 267,
+            "width": 483.0141493526568
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 364.83025044156614,
+            "y": 97.57567193251253
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "25138537-e006-47e9-82b1-0089210e19ad",
+          "position": {
+            "x": 932,
+            "y": 95
+          },
+          "type": "comment",
+          "dragHandle": "#commentHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 505,
+          "height": 266,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "comment": "Search libraries in Private Pypiserver",
+            "fill": "#F9C74F",
+            "height": 266,
+            "width": 505
+          },
+          "zIndex": -1,
+          "selectable": false,
+          "connectable": false,
+          "positionAbsolute": {
+            "x": 932,
+            "y": 95
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "b8fec151-9f54-4df3-bd34-eea6c945d86d",
+          "position": {
+            "x": 432,
+            "y": 193
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 339,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Search in Private Docker Registry",
+            "events": null,
+            "description": "\n### Search images in Private Docker Registry\nWith this extension you can see all Docker image's versions pushed on Private Registry.\n\nYou need to configure this block with the name of the image you want to search.\n\nYou don't need to insert the full name of the image, but you can use also search a part of it.\n\n*(for example, you can insert \"stor\" to searching \"storage\")*\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "search_docker_images",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Registry/Pypiserver",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "registry_name",
+                  "type": "select",
+                  "label": "Registry name",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "options": [
+                    "registry.livetech.site"
+                  ]
+                },
+                {
+                  "name": "image_name",
+                  "type": "text",
+                  "label": "Docker Image Name",
+                  "helper": "Docker Image name to search",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiFileSearchFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "registry_name": "registry.livetech.site",
+                "image_name": "ds4biz-predictor"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 432,
+            "y": 193
+          },
+          "__class__": "Node"
+        },
+        {
+          "id": "2d25d4a7-0094-4a55-99ad-31868308ac99",
+          "position": {
+            "x": 1049,
+            "y": 195
+          },
+          "type": "custom",
+          "dragHandle": "#nodeHandle",
+          "sourcePosition": "right",
+          "targetPosition": "left",
+          "width": 297,
+          "height": 88,
+          "selected": false,
+          "dragging": false,
+          "data": {
+            "name": "Search in Private Pypiserver",
+            "events": null,
+            "description": "\n### Search libraries in Private Pypiserver\nWith this extension you can see all Python library's versions pushed on Private Pypiserver.\n\nYou need to configure this block with the name of the python library you want to search.\n\nYou MUST insert the full name of the python library!\n",
+            "inputs": [
+              {
+                "id": "input",
+                "label": "Input",
+                "service": "search_python_lib",
+                "to": "output"
+              }
+            ],
+            "outputs": [
+              {
+                "id": "output",
+                "label": "Output"
+              }
+            ],
+            "configured": true,
+            "options": {
+              "group": "Docker-Utils Registry/Pypiserver",
+              "args": [
+                {
+                  "name": "comment",
+                  "type": "area",
+                  "label": "Node comment",
+                  "helper": "Use it to explain the usage of this node"
+                },
+                {
+                  "name": "alias",
+                  "type": "text",
+                  "label": "Name",
+                  "helper": "Use this name as an alias"
+                },
+                {
+                  "name": "debug",
+                  "type": "boolean",
+                  "label": "Debug to Console",
+                  "divider": true
+                },
+                {
+                  "name": "pypiserver",
+                  "type": "select",
+                  "label": "Pypiserver name",
+                  "helper": "",
+                  "group": "",
+                  "value": null,
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  },
+                  "options": [
+                    "distribution.livetech.site"
+                  ]
+                },
+                {
+                  "name": "python_lib",
+                  "type": "text",
+                  "label": "Python Library Name",
+                  "helper": "Image name to search. IMPORTANT: insert the EXACT name of the library",
+                  "group": "",
+                  "value": "",
+                  "description": "",
+                  "validation": {
+                    "required": "Required field"
+                  }
+                }
+              ],
+              "click": "Send message",
+              "icon": "RiFileSearchFill",
+              "values": {
+                "comment": "",
+                "alias": "",
+                "debug": true,
+                "pypiserver": "distribution.livetech.site",
+                "python_lib": "ds4biz-predictor"
+              }
+            },
+            "locked": null
+          },
+          "selectable": true,
+          "draggable": true,
+          "positionAbsolute": {
+            "x": 1049,
+            "y": 195
+          },
+          "__class__": "Node"
+        }
+      ],
+      "edges": [],
+      "__class__": "Graph"
+    }
+  },
+  "open": [
+    "Info"
+  ],
+  "active": "Info",
+  "version": "1.0.0",
+  "__class__": "Project"
+}
