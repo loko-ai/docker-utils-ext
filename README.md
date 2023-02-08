@@ -25,7 +25,7 @@ Through LokoAI you can also open _**Docker Utils Dashboard**_, where you have a 
 First of all, you need to copy your _~/.docker/config.json_ file inside loko folder, using this simple command as it is:
 
 ```sh
-sudo mkdir -p /var/opt/loko/docker-utils-ext && sudo cp /home/$USER/.docker/config.json /var/opt/loko/docker-utils-ext
+sudo mkdir -p /var/opt/loko/docker-utils-ext && sudo cp /home/$USER/.docker/config.json /var/opt/loko/docker-utils-ext/config.json
 ```
 
 Than, you can import this project inside Loko and run it 😎
