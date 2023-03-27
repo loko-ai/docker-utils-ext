@@ -11,8 +11,8 @@ services:
     volumes:
       ## DO NOT EDIT OR DELETE THIS FIRST VOLUME MOUNT
       - /var/run/docker.sock:/var/run/docker.sock
-      - /var/opt/loko/docker-utils-ext/config.json:/root/.docker/config.json
-      - /var/opt/loko/docker-utils-ext/volumes/templates:/templates
+      - C:\loko-volumes\docker-utils-ext\config.json:/root/.docker/config.json
+      - C:\loko-volumes\docker-utils-ext\volumes\templates:/templates
     environment:
       - ENGINE=docker
       - SOCKET_HOST=hermes
