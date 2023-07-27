@@ -20,7 +20,7 @@ You can:
 - Search Docker Images on Private Docker Registry
 - Search Python libs on Private Pypyserver
 
-If you want pre-configured flows, you can import <a href="https://github.com/loko-ai/docker_utils_example">this project</a> 😉
+_If you want pre-configured flows, you can import <a href="https://github.com/loko-ai/docker_utils_example">this project</a>_ 😉
 
 Through LokoAI you can also open _**Docker Utils Dashboard**_, where you have a GUI that you can navigate to manually monitoring all the containers, show their logs, and much more..
 ![docker-utils-dashboard.png](images%2Fdocker-utils-dashboard.png)
