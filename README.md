@@ -1,4 +1,4 @@
-<html><p><img src="icon.png" alt="docker" width="100" align="left" /> </p> <h1>Docker-utils-ext</h1><br></html>
+<html><p><img src="icon.png" alt="docker" width="8%" align="left" /> </p> <h1>Docker-utils-ext</h1><br></html>
 
 ### _Full control your Docker stacks with LokoAI !_ 
 
