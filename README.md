@@ -1,7 +1,8 @@
-# Docker-utils-ext
+<html><p><img src="icon.png" alt="docker" width="100" align="left" /> </p> <h1>Docker-utils-ext</h1><br></html>
+
 ### _Full control your Docker stacks with LokoAI !_ 
 
-![Dockerutilsextpng](Docker-Utils-Ext.png "Docker-utils-ext")
+![Dockerutilsextpng](images/Docker-Utils-Ext.png "Docker-utils-ext")
 
 Docker-utils-ext is an extension for LokoAI. More info about LokoAI [Here]
 
@@ -19,8 +20,10 @@ You can:
 - Search Docker Images on Private Docker Registry
 - Search Python libs on Private Pypyserver
 
-Through LokoAI you can also open _**Docker Utils Dashboard**_, where you have a GUI that you can navigate to manually monitoring all the containers, show their logs, and much more..
+If you want pre-configured flows, you can import <a href="https://github.com/loko-ai/docker_utils_example">this project</a> 😉
 
+Through LokoAI you can also open _**Docker Utils Dashboard**_, where you have a GUI that you can navigate to manually monitoring all the containers, show their logs, and much more..
+![docker-utils-dashboard.png](images%2Fdocker-utils-dashboard.png)
 ___
 
 # Installation
